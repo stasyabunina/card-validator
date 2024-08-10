@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Validation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@200;300;400;700;800&family=BioRhyme:wght@200..800&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Sanchez:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="absolute">
+    <div class="bg-shape1 bg-teal bg-blur"></div>
+    <div class="bg-shape2 bg-purple bg-blur"></div>
+  </div>
+  <main class="validator">
+    <div class="container">
+      <div class="validator__wrapper">
+        <div class="validator__widget box box-one">
+          <div class="boxes">
+            <div class="box box-two"></div>
+            <div class="box box-three"></div>
+            <div class="box box-four"></div>
+          </div>
+          <h1 class="validator__title visually-hidden">Card Validation</h1>
+          <ul class="validator__cards">
+            <li class="validator__card visa" title="Visa"><span class="visually-hidden">Visa</span><img src="img/visa.svg"
+                alt="Visa" class="validator__img"></li>
+            <li class="validator__card amex" title="American Express"><span class="visually-hidden">American
+                Express</span><img src="img/amex.svg" alt="American Express" class="validator__img"></li>
+            <li class="validator__card jcb" title="JCB"><span class="visually-hidden">JCB</span><img src="img/jcb.svg"
+                alt="JCB" class="validator__img"></li>
+            <li class="validator__card discover" title="Discover"><span class="visually-hidden">Discover</span><img
+                src="img/discover.svg" alt="Discover" class="validator__img"></li>
+            <li class="validator__card mir" title="Мир"><span class="visually-hidden">Мир</span><img src="img/mir.svg"
+                alt="Мир" class="validator__img"></li>
+            <li class="validator__card mastercard" title="Mastercard"><span class="visually-hidden">Mastercard</span><img
+                src="img/mastercard.svg" alt="Mastercard" class="validator__img"></li>
+            <li class="validator__card diners" title="Diners Club"><span class="visually-hidden">Diners Club</span><img
+                src="img/diners.svg" alt="Diners" class="validator__img"></li>
+          </ul>
+          <form class="validator__form">
+            <label class="validator__input-wrapper">
+              <span class="validator__input-text">Введите номер кредитной карты</span>
+              <input class="validator__input" type="text" placeholder="5555 5555 5555 4444" required>
+            </label>
+            <button class="validator__button">Verify</button>
+          </form>
+        </div>
+        <footer class="validator__rights">
+          <span>&copy; Все svg-иконки взяты с <a href="https://iconduck.com/" class="link"
+            target="_blank">iconduck.com</a></span>
+        </footer>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

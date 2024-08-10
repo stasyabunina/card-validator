@@ -1,0 +1,174 @@
+.validator {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    transition:  transform .25s ease-in-out;
+  }
+
+  .box-one {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 5;
+
+    &:hover {
+      transform: translate(1px, 1px);
+
+      .box-two {
+        transform: translate(8px, 8px);
+      }
+
+      .box-three {
+        transform: translate(-8px, -8px);
+      }
+
+      .box-four {
+        transform: translate(-8px, 8px);
+      }
+    }
+  }
+
+  .box-two {
+    position: absolute;
+    bottom: -70px;
+    right: -20px;
+    width: 130px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  }
+
+  .box-three {
+    position: absolute;
+    top: -135px;
+    right: 60%;
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  }
+
+  .box-four {
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  }
+
+  &__wrapper {
+    position: relative;
+    @include flex-column;
+    align-items: center;
+  }
+
+  &__rights {
+    color: rgba(211, 211, 211, 0.15);
+    position: absolute;
+    bottom: -22%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 35;
+    text-align: center;
+
+    a {
+      color: rgba(211, 211, 211, 0.15);
+    }
+  }
+
+  &__widget {
+    padding: 40px;
+  }
+
+  &__form {
+    @include flex-column;
+    align-items: center
+  }
+
+  &__input-wrapper {
+    @include flex-column;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    @include button;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      background-color: #121212;
+    }
+
+    &:focus-visible {
+      background-color: #121212;
+      outline: none
+    }
+  }
+
+  &__cards {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__card {
+    width: 80px;
+    height: 51.3px;
+    margin-right: 8px;
+    border-radius: 6px;
+    display: flex;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__input-text {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    backdrop-filter: blur(10px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 25px;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color .25s ease-in-out;
+
+    &::placeholder {
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: 0.2em;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      color:rgb(134, 134, 134);
+    }
+
+    &:focus-visible {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__img {
+    border-radius: inherit;
+  }
+}

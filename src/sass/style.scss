@@ -1,0 +1,109 @@
+@import "normalize.css";
+@import "var";
+
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin button {
+  padding: 20px 50px;
+  background-color: $color_primary;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  transition: background-color .1s ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #121212;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1366px;
+  padding: 0 170px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-moz-selection {
+  color: white;
+  background: $color_primary;
+}
+
+::selection {
+  color: white;
+  background: $color_primary;
+}
+
+.error {
+  color: rgba(185, 20, 20, 0.871);
+}
+
+@import 'popup';
+@import 'background';
+@import 'validator';
