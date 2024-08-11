@@ -17,7 +17,21 @@
   border-radius: 8px;
   font-weight: 600;
   color: white;
-  transition: background-color .1s ease-in-out;
+  transition: background-color .1s ease-in-out, transform .1s ease;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background-color: #121212;
+  }
+
+  &:focus-visible {
+    background-color: #121212;
+    outline: none
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 html {
@@ -101,6 +115,8 @@ button {
 }
 
 .error {
+  position: absolute;
+  top: 100%;
   color: rgba(185, 20, 20, 0.871);
 }
 

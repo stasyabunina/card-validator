@@ -97,22 +97,13 @@
 
   &__input-wrapper {
     @include flex-column;
+    position: relative;
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 
   &__button {
     @include button;
-    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.15);
-
-    &:hover {
-      background-color: #121212;
-    }
-
-    &:focus-visible {
-      background-color: #121212;
-      outline: none
-    }
   }
 
   &__cards {
@@ -151,6 +142,7 @@
     font-family: "Courier Prime", monospace;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 0.2em;
     transition: background-color .25s ease-in-out;
 
     &::placeholder {
